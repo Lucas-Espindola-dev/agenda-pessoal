@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from rest_framework import viewsets
+from agenda.models import Compromissos
 
-# Create your views here.
+
+class AgendaViewset(viewsets.ModelViewSet):
+    queryset = Compromissos.objects.all()
+    serializer_class = None
